@@ -8,7 +8,7 @@ class ScolList {
     return {
       'codClass': (codClass == 0) ? null : codClass,
       'nomClass': nomClass,
-      'nbreEtiud': nbreEtud,
+      'nbreEtud': nbreEtud,
     };
   }
 }

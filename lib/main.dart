@@ -38,7 +38,7 @@ class _ShListState extends State<ShList> {
   @override
   Widget build(BuildContext context) {
     ScolListDialog dialog = ScolListDialog();
-
+    //log("setting state");
     showData();
     return Scaffold(
         appBar: AppBar(

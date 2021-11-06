@@ -57,7 +57,7 @@ class dbuse {
 
   insertClass(ScolList list) async {
     int id = await this.db.insert(
-          'lists',
+          'classes',
           list.toMap(),
           conflictAlgorithm: ConflictAlgorithm.replace,
         );
@@ -80,9 +80,9 @@ class dbuse {
 
   Future<int> deleteList(ScolList list) async {
     int result = await db
-        .delete("items", where: "idList = ?", whereArgs: [list.codClass]);
-    result =
-        await db.delete("lists", where: "id = ?", whereArgs: [list.codClass]);
+        .delete("etudiants", where: "id = ?", whereArgs: [list.codClass]);
+    result = await db
+        .delete("classes", where: "codClass = ?", whereArgs: [list.codClass]);
     return result;
   }
 }
